@@ -28,7 +28,7 @@ def draw_line_plot():
     return fig
 
 def draw_bar_plot():
-    #[PS] I did refer some code from net to tidy up my bar plot as I was finding it difficult to learn the parameters
+    #[PS] I did refer some code from net to tidy up my bar plot as I was finding it difficult to get the right parameters
     df_groupby=df.copy()
 
     # Copy and modify data for monthly bar plot
