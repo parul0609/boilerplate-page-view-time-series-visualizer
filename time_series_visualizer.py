@@ -28,6 +28,7 @@ def draw_line_plot():
     return fig
 
 def draw_bar_plot():
+    #[PS] I did refer some code from net to tidy up my bar plot as I was finding it difficult to learn the parameters
     df_groupby=df.copy()
 
     # Copy and modify data for monthly bar plot
@@ -50,11 +51,11 @@ def draw_bar_plot():
 
 def draw_box_plot():
     # Prepare data for box plots (this part is done!)
+    #[PS] I did add some extra code to get the month name as the original code was giving me month as numbers.
     df_box = df.copy()
     df_box.reset_index(inplace=True)
     df_box['date'] = pd.to_datetime(df_box['date'])
-    
-    df_box.reset_index(inplace=True)
+   
     df_box['year'] = [d.year for d in df_box.date]
     df_box['month'] = [d.month for d in df_box.date]
     df_box['month_name'] = [d.strftime('%b') for d in df_box.date]
